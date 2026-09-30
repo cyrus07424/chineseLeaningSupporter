@@ -19,11 +19,24 @@ export type Line = {
   translation: string;
 };
 
+export type GrammarPoint = {
+  /** 文法項目 */
+  title: string;
+  /** 文法の説明 */
+  explanation: string;
+  /** 例文 */
+  example: string;
+  /** 例文の日本語訳 */
+  exampleTranslation: string;
+};
+
 export type Stage = {
   id: string;
   title: string;
   /** ステージの説明 */
   description: string;
+  /** このステージで学ぶ文法 */
+  grammar: GrammarPoint;
   lines: Line[];
 };
 
@@ -32,6 +45,12 @@ export const stages: Stage[] = [
     id: "stage-1",
     title: "第1話：はじめまして",
     description: "初対面のあいさつを学ぶスキットです。",
+    grammar: {
+      title: "「我叫＋名前」で名前を伝える",
+      explanation: "「我叫」のあとに名前を置くと、「私は〜といいます」という意味になります。",
+      example: "我叫王芳。",
+      exampleTranslation: "私は王芳といいます。",
+    },
     lines: [
       {
         speaker: "王さん",
@@ -83,6 +102,12 @@ export const stages: Stage[] = [
     id: "stage-2",
     title: "第2話：お礼を言う",
     description: "感謝の気持ちを伝える表現を学ぶスキットです。",
+    grammar: {
+      title: "「代名詞＋的」で持ち主を表す",
+      explanation: "「的」を代名詞の後ろにつけると、「〜の」という意味になります。",
+      example: "这是我的。",
+      exampleTranslation: "これは私のです。",
+    },
     lines: [
       {
         speaker: "田中さん",
@@ -124,6 +149,12 @@ export const stages: Stage[] = [
     id: "stage-3",
     title: "第3話：買い物をする",
     description: "お店での簡単なやり取りを学ぶスキットです。",
+    grammar: {
+      title: "「我要＋もの」で希望を伝える",
+      explanation: "「我」のあとに「要」と欲しいものを続けると、「私は〜が欲しいです」と伝えられます。",
+      example: "我要这个。",
+      exampleTranslation: "これをください。",
+    },
     lines: [
       {
         speaker: "店員",
