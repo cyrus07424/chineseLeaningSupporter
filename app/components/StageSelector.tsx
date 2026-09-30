@@ -41,6 +41,9 @@ export default function StageSelector({
                   <span className="block text-sm text-gray-500">
                     {stage.description}
                   </span>
+                  <span className="mt-1 block text-sm font-medium text-blue-700">
+                    文法：{stage.grammar.title}
+                  </span>
                 </span>
                 <span className="text-2xl ml-3 shrink-0">
                   {isCleared ? "✅" : isUnlocked ? "▶️" : "🔒"}

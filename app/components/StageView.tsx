@@ -37,6 +37,19 @@ export default function StageView({ stage, onClear, onBack }: Props) {
       <h2 className="text-2xl font-bold text-gray-800 mb-1">{stage.title}</h2>
       <p className="text-gray-500 mb-4">{stage.description}</p>
 
+      <section
+        aria-labelledby="grammar-preview-title"
+        className="mb-6 rounded-lg border border-blue-200 bg-blue-50 p-4"
+      >
+        <p className="mb-1 text-sm font-semibold text-blue-700">このステージの文法</p>
+        <h3 id="grammar-preview-title" className="mb-2 text-lg font-bold text-gray-800">
+          {stage.grammar.title}
+        </h3>
+        <p className="mb-2 text-gray-700">{stage.grammar.explanation}</p>
+        <p className="font-semibold text-gray-800">{stage.grammar.example}</p>
+        <p className="text-sm text-gray-600">{stage.grammar.exampleTranslation}</p>
+      </section>
+
       {stage.lines.map((line, idx) => (
         <Line key={idx} line={line} showTranslation={showTranslation} />
       ))}
