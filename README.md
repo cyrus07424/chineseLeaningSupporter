@@ -1,3 +1,13 @@
+中国語学習サポーター (chineseLeaningSupporter) は、日本語話者向けに簡単なスキット（寸劇）をステージクリア形式で進めながら中国語を学べる Web アプリです。
+
+## 主な機能
+
+- スキットをステージ単位でクリアしながら進める、ステージクリア型学習
+- 単語・フレーズをクリックするとピンインと日本語の意味を表示
+- セリフ全文の日本語訳の表示切り替え
+- ブラウザ標準の Web Speech API (SpeechSynthesis) を使った中国語の読み上げ（追加ライブラリ不要、対応ブラウザで利用可能）
+- 学習コンテンツは `app/data/skits.ts` に定義されており、ステージを追加してコンテンツを充実させていけます
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
